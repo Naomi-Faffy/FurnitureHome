@@ -9,13 +9,13 @@
   <title>Royal Decaux</title>
   
   <!-- Favicon using uploaded logo -->
-  <link rel="icon" type="image/png" href="assets/images/logo.png">
-  <link rel="shortcut icon" type="image/png" href="assets/images/logo.png">
+  <link rel="icon" type="image/png" href="/assets/images/logo.png">
+  <link rel="shortcut icon" type="image/png" href="/assets/images/logo.png">
 
   <!-- Master Luxury Design System (Cream Linen & Sovereign Royal Blue) -->
-  <link rel="stylesheet" href="assets/css/luxury-master.css?v=10.0">
-  <link rel="stylesheet" href="assets/css/style.css?v=10.0">
-  <link rel="stylesheet" href="assets/css/responsive-shield.css?v=3.0">
+  <link rel="stylesheet" href="/assets/css/luxury-master.css?v=6.0">
+  <link rel="stylesheet" href="/assets/css/style.css?v=6.0">
+  <link rel="stylesheet" href="/assets/css/responsive-shield.css?v=6.0">
   <script src="https://unpkg.com/lucide@latest"></script>
 
   <style>
@@ -287,26 +287,26 @@
   <div class="mobile-nav-overlay" id="mobileNavOverlay" onclick="window.closeRoyalMobileNav ? window.closeRoyalMobileNav(event) : (document.getElementById('mobileNavDrawer').classList.remove('active'), document.getElementById('mobileNavOverlay').classList.remove('active'), document.body.style.overflow='');"></div>
   <div class="mobile-nav-drawer" id="mobileNavDrawer">
     <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border-gold); padding-bottom: 1rem;">
-      <a href="index.html" class="brand-identity" style="text-decoration: none;" onclick="if(window.closeRoyalMobileNav)window.closeRoyalMobileNav();window.location.href='index.html';return false;">
+      <div class="brand-identity">
         <img src="assets/images/logo.png" alt="Royal Decaux" style="height: 38px;">
         <span class="brand-name" style="font-size: 1.1rem;">ROYAL <span>DECAUX</span></span>
-      </a>
+      </div>
       <button class="modal-close-icon" id="closeMobileNavBtn" style="position: static;" onclick="window.closeRoyalMobileNav ? window.closeRoyalMobileNav(event) : (document.getElementById('mobileNavDrawer').classList.remove('active'), document.getElementById('mobileNavOverlay').classList.remove('active'), document.body.style.overflow='');">
         <i data-lucide="x" style="width: 16px; height: 16px;"></i>
       </button>
     </div>
 
     <nav class="mobile-nav-links">
-      <a href="index.html" class="mobile-nav-link" onclick="if(window.closeRoyalMobileNav)window.closeRoyalMobileNav();window.location.href='index.html';return false;">Home</a>
-      <a href="shop.html" class="mobile-nav-link" onclick="if(window.closeRoyalMobileNav)window.closeRoyalMobileNav();window.location.href='shop.html';return false;">Catalogue</a>
-      <a href="index.html#categories" class="mobile-nav-link" onclick="if(window.closeRoyalMobileNav)window.closeRoyalMobileNav();window.location.href='index.html#categories';return false;">Rooms</a>
-      <a href="index.html#deals" class="mobile-nav-link" onclick="if(window.closeRoyalMobileNav)window.closeRoyalMobileNav();window.location.href='index.html#deals';return false;">Exhibition</a>
-      <a href="about.html" class="mobile-nav-link active" onclick="if(window.closeRoyalMobileNav)window.closeRoyalMobileNav();window.scrollTo({top:0,behavior:'smooth'});return false;">Heritage</a>
-      <a href="contact.html" class="mobile-nav-link" onclick="if(window.closeRoyalMobileNav)window.closeRoyalMobileNav();window.location.href='contact.html';return false;">Showroom</a>
+      <a href="index.html" class="mobile-nav-link">Home</a>
+      <a href="shop.html" class="mobile-nav-link">Catalogue</a>
+      <a href="index.html#categories" class="mobile-nav-link">Rooms</a>
+      <a href="index.html#deals" class="mobile-nav-link">Exhibition</a>
+      <a href="about.html" class="mobile-nav-link active">Heritage</a>
+      <a href="contact.html" class="mobile-nav-link">Showroom</a>
     </nav>
 
     <div style="margin-top: auto; padding-top: 1.5rem; border-top: 1px solid var(--border-gold);">
-      <a href="contact.html" class="btn-royal" style="width: 100%; text-align: center; margin-bottom: 0.75rem;" onclick="if(window.closeRoyalMobileNav)window.closeRoyalMobileNav();window.location.href='contact.html';return false;">
+      <a href="contact.html" class="btn-royal" style="width: 100%; text-align: center; margin-bottom: 0.75rem;">
         <i data-lucide="phone" style="width: 16px; height: 16px;"></i>
         <span>Contact Us</span>
       </a>
@@ -575,8 +575,8 @@
     </div>
   </div>
 
-  <script src="assets/js/mobile-nav.js?v=3.0"></script>
-  <script src="assets/js/main.js"></script>
+  <script src="/assets/js/mobile-nav.js?v=6.0"></script>
+  <script src="/assets/js/main.js"></script>
   <script>
     lucide.createIcons();
   </script>
