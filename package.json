@@ -1,10 +1,10 @@
 {
-  "name": "royal-decaux-luxury",
+  "name": "royal-decaux-online",
   "version": "1.0.0",
   "private": true,
-  "description": "Royal Decaux Zimbabwean Luxury Furniture Atelier",
+  "type": "commonjs",
   "scripts": {
-    "build": "echo Royal Decaux static build verified",
+    "build": "",
     "dev": "node server.cjs"
   }
 }
