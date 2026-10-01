@@ -1,7 +1,6 @@
 # Local development server and dependencies
 server.cjs
 server.js
-package.json
 node_modules/
 .vercel/
 *.log
