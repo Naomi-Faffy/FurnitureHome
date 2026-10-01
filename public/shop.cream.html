@@ -1,0 +1,924 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Cache-Control" content="no-store, no-cache, must-revalidate, max-age=0">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+  <title>Royal Decaux</title>
+  
+  <!-- Favicon using uploaded logo -->
+  <link rel="icon" type="image/png" href="/assets/images/logo.png">
+  <link rel="shortcut icon" type="image/png" href="/assets/images/logo.png">
+
+  <!-- Master Luxury Design System (Cream Linen & Sovereign Royal Blue) -->
+  <link rel="stylesheet" href="/assets/css/luxury-master.css?v=25.0">
+  <link rel="stylesheet" href="/assets/css/style.css?v=25.0">
+  <link rel="stylesheet" href="/assets/css/responsive-shield.css?v=25.0">
+  
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+
+  <!-- Solid Luxury Sticky Navigation (100% Identical to Home Page) -->
+  <header class="site-header">
+    <div class="container">
+      <div class="header-inner">
+        <!-- Brand Identity -->
+        <a href="index.html" class="brand-identity">
+          <img src="/assets/images/logo.png" alt="Royal Decaux Logo" class="brand-logo-img">
+          <span class="brand-name">ROYAL <span>DECAUX</span></span>
+        </a>
+
+        <!-- Main Navigation Links (Single-Word, Single-Line, Never Wraps) -->
+        <nav class="main-nav">
+          <a href="index.html" class="nav-link">Home</a>
+          <a href="shop.html" class="nav-link active">Catalogue</a>
+          <a href="index.html#categories" class="nav-link">Rooms</a>
+          <a href="index.html#deals" class="nav-link">Exhibition</a>
+          <a href="about.html" class="nav-link">Heritage</a>
+          <a href="contact.html" class="nav-link">Showroom</a>
+        </nav>
+
+        <!-- Search, Wishlist, Cart & Contact Actions -->
+        <div class="header-actions">
+          <div class="glass-search-box">
+            <i data-lucide="search" style="width: 15px; height: 15px; color: var(--text-muted);"></i>
+            <input type="text" id="siteSearchInput" placeholder="Search archive...">
+          </div>
+
+          <button class="icon-btn" title="Saved Wishlist" onclick="alert('Your Executive Wishlist is saved.')">
+            <i data-lucide="heart" style="width: 17px; height: 17px;"></i>
+          </button>
+
+          <button class="icon-btn trigger-cart" title="Shopping Basket">
+            <i data-lucide="shopping-bag" style="width: 17px; height: 17px;"></i>
+            <span class="badge-count">3</span>
+          </button>
+
+          <a href="contact.html" class="btn-concierge">
+            <i data-lucide="phone" style="width: 15px; height: 15px;"></i>
+            <span>Contact</span>
+          </a>
+
+          <!-- Mobile Hamburger Toggle -->
+          <button class="mobile-toggle-btn" id="mobileMenuBtn" aria-label="Toggle navigation" onclick="window.openRoyalMobileNav ? window.openRoyalMobileNav(event) : (document.getElementById('mobileNavDrawer').classList.add('active'), document.getElementById('mobileNavOverlay').classList.add('active'), document.body.style.overflow='hidden');">
+            <i data-lucide="menu" style="width: 20px; height: 20px;"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation Drawer -->
+  <div class="mobile-nav-overlay" id="mobileNavOverlay" onclick="window.closeRoyalMobileNav ? window.closeRoyalMobileNav(event) : (document.getElementById('mobileNavDrawer').classList.remove('active'), document.getElementById('mobileNavOverlay').classList.remove('active'), document.body.style.overflow='');"></div>
+  <div class="mobile-nav-drawer" id="mobileNavDrawer">
+    <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border-gold); padding-bottom: 1rem;">
+      <a href="index.html" class="brand-identity" style="text-decoration: none;" onclick="if(window.closeRoyalMobileNav)window.closeRoyalMobileNav();window.location.href='index.html';return false;">
+        <img src="/assets/images/logo.png" alt="Royal Decaux" style="height: 38px;">
+        <span class="brand-name" style="font-size: 1.1rem;">ROYAL <span>DECAUX</span></span>
+      </a>
+      <button class="modal-close-icon" id="closeMobileNavBtn" style="position: static;" onclick="window.closeRoyalMobileNav ? window.closeRoyalMobileNav(event) : (document.getElementById('mobileNavDrawer').classList.remove('active'), document.getElementById('mobileNavOverlay').classList.remove('active'), document.body.style.overflow='');">
+        <i data-lucide="x" style="width: 16px; height: 16px;"></i>
+      </button>
+    </div>
+
+    <nav class="mobile-nav-links">
+      <a href="index.html" class="mobile-nav-link" onclick="if(window.closeRoyalMobileNav)window.closeRoyalMobileNav();window.location.href='index.html';return false;">Home</a>
+      <a href="shop.html" class="mobile-nav-link active" onclick="if(window.closeRoyalMobileNav)window.closeRoyalMobileNav();window.scrollTo({top:0,behavior:'smooth'});return false;">Catalogue</a>
+      <a href="index.html#categories" class="mobile-nav-link" onclick="if(window.closeRoyalMobileNav)window.closeRoyalMobileNav();window.location.href='index.html#categories';return false;">Rooms</a>
+      <a href="index.html#deals" class="mobile-nav-link" onclick="if(window.closeRoyalMobileNav)window.closeRoyalMobileNav();window.location.href='index.html#deals';return false;">Exhibition</a>
+      <a href="about.html" class="mobile-nav-link" onclick="if(window.closeRoyalMobileNav)window.closeRoyalMobileNav();window.location.href='about.html';return false;">Heritage</a>
+      <a href="contact.html" class="mobile-nav-link" onclick="if(window.closeRoyalMobileNav)window.closeRoyalMobileNav();window.location.href='contact.html';return false;">Showroom</a>
+    </nav>
+
+    <div style="margin-top: auto; padding-top: 1.5rem; border-top: 1px solid var(--border-gold);">
+      <a href="contact.html" class="btn-royal" style="width: 100%; text-align: center; margin-bottom: 0.75rem;" onclick="if(window.closeRoyalMobileNav)window.closeRoyalMobileNav();window.location.href='contact.html';return false;">
+        <i data-lucide="phone" style="width: 16px; height: 16px;"></i>
+        <span>Contact Us</span>
+      </a>
+      <p style="font-size: 0.75rem; color: var(--text-muted); text-align: center;">Borrowdale Road &bull; Harare</p>
+    </div>
+  </div>
+
+  <div class="site-wrapper">
+
+    <!-- Catalogue Editorial Banner -->
+    <section class="shop-hero">
+      <div class="container">
+        <span class="section-label">Permanent Masterworks</span>
+        <h1 class="hero-title" style="margin-bottom: 0.6rem;">The Sovereign Archive</h1>
+        <p class="section-desc" style="max-width: 660px; margin: 0 auto;">
+          Solid indigenous hardwoods, kiln-dried Zambezi teak, and Italian saddle leather furnishings tailored for executive residences, boardrooms, and estate retreats.
+        </p>
+      </div>
+    </section>
+
+    <!-- Main Catalogue Content -->
+    <div class="container" style="padding-bottom: 5rem;">
+      <div class="catalogue-layout">
+
+        <!-- Sidebar Filter System -->
+        <aside class="shop-sidebar">
+          <div class="filter-section">
+            <h4 class="filter-heading">Curated Spaces</h4>
+            <div class="filter-item">
+              <input type="radio" name="catFilter" id="cat-all" checked onchange="filterCatalogue('all')">
+              <label for="cat-all" style="cursor: pointer; margin-left: 0.5rem; font-weight: 700; color: var(--royal-blue);">All Masterworks (12)</label>
+            </div>
+            <div class="filter-item">
+              <input type="radio" name="catFilter" id="cat-exec" onchange="filterCatalogue('executive')">
+              <label for="cat-exec" style="cursor: pointer; margin-left: 0.5rem;">Executive Desks &amp; Thrones (4)</label>
+            </div>
+            <div class="filter-item">
+              <input type="radio" name="catFilter" id="cat-living" onchange="filterCatalogue('living')">
+              <label for="cat-living" style="cursor: pointer; margin-left: 0.5rem;">Living &amp; Lounges (3)</label>
+            </div>
+            <div class="filter-item">
+              <input type="radio" name="catFilter" id="cat-dining" onchange="filterCatalogue('dining')">
+              <label for="cat-dining" style="cursor: pointer; margin-left: 0.5rem;">Solid Mukwa Dining (2)</label>
+            </div>
+            <div class="filter-item">
+              <input type="radio" name="catFilter" id="cat-bed" onchange="filterCatalogue('bedroom')">
+              <label for="cat-bed" style="cursor: pointer; margin-left: 0.5rem;">Master Bedroom (2)</label>
+            </div>
+            <div class="filter-item">
+              <input type="radio" name="catFilter" id="cat-lighting" onchange="filterCatalogue('lighting')">
+              <label for="cat-lighting" style="cursor: pointer; margin-left: 0.5rem;">Chandeliers &amp; Brass (1)</label>
+            </div>
+          </div>
+
+          <div class="filter-section">
+            <h4 class="filter-heading">Atelier Materials</h4>
+            <div class="filter-item">
+              <input type="checkbox" id="mat-mukwa" checked>
+              <label for="mat-mukwa" style="cursor: pointer; margin-left: 0.5rem;">Solid African Mukwa</label>
+            </div>
+            <div class="filter-item">
+              <input type="checkbox" id="mat-leather" checked>
+              <label for="mat-leather" style="cursor: pointer; margin-left: 0.5rem;">Top-Grain Italian Cowhide</label>
+            </div>
+            <div class="filter-item">
+              <input type="checkbox" id="mat-teak" checked>
+              <label for="mat-teak" style="cursor: pointer; margin-left: 0.5rem;">Kiln-Dried Zambezi Teak</label>
+            </div>
+            <div class="filter-item">
+              <input type="checkbox" id="mat-velvet" checked>
+              <label for="mat-velvet" style="cursor: pointer; margin-left: 0.5rem;">Bordeaux Tufted Velvet</label>
+            </div>
+          </div>
+
+          <div class="filter-section">
+            <h4 class="filter-heading">Showroom Status</h4>
+            <p style="font-size: 0.82rem; color: #174e2d; font-weight: 700; margin-bottom: 0.4rem;">
+              &bull; Harare Showroom Ready
+            </p>
+            <p style="font-size: 0.78rem; color: var(--text-muted); line-height: 1.5;">
+              All pieces displayed in our Borrowdale Gallery with immediate white-glove nationwide dispatch.
+            </p>
+          </div>
+        </aside>
+
+        <!-- Product Grid Column -->
+        <main class="shop-main">
+          
+          <div class="shop-toolbar">
+            <div class="results-count">
+              Showing <strong id="displayedCount" style="color: var(--royal-blue);">12</strong> Masterworks
+            </div>
+            <div style="display: flex; align-items: center; gap: 0.75rem;">
+              <label for="sortSelect" style="font-size: 0.82rem; color: var(--text-muted); font-family: var(--font-accent); text-transform: uppercase;">Sort by:</label>
+              <select id="sortSelect" class="sort-select">
+                <option value="featured">Sovereign Curation</option>
+                <option value="price-low">Investment: Low to High</option>
+                <option value="price-high">Investment: High to Low</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Product Grid (All Images Proportioned & Normal Size) -->
+          <div class="product-grid" id="catalogueProductGrid">
+
+            <!-- Item 1 -->
+            <div class="product-card" data-category="executive" data-price="680" data-material="Solid Teak & Italian Saddle Leather" data-dims="74cm x 72cm x 132cm" data-stock="Harare Showroom Ready">
+              <div class="product-image-box">
+                <span class="card-badge">Lion Throne</span>
+                <div class="card-quick-actions">
+                  <button class="card-action-btn trigger-quickview" title="Examine Details"><i data-lucide="eye" style="width: 15px; height: 15px;"></i></button>
+                  <button class="card-action-btn" title="Save to Wishlist" onclick="alert('Added to your Executive Wishlist.')"><i data-lucide="heart" style="width: 15px; height: 15px;"></i></button>
+                </div>
+                <img src="/assets/images/exec_chair.jpg" alt="The Sovereign Executive Throne" class="product-img">
+              </div>
+              <div class="product-body">
+                <div class="product-cat-name">Executive Office</div>
+                <h3 class="product-title">The Sovereign Executive High-Back Throne</h3>
+                <div class="product-rating">
+                  <i data-lucide="star" style="width: 13px; height: 13px; fill: currentColor;"></i>
+                  <i data-lucide="star" style="width: 13px; height: 13px; fill: currentColor;"></i>
+                  <i data-lucide="star" style="width: 13px; height: 13px; fill: currentColor;"></i>
+                  <i data-lucide="star" style="width: 13px; height: 13px; fill: currentColor;"></i>
+                  <i data-lucide="star" style="width: 13px; height: 13px; fill: currentColor;"></i>
+                  <span class="rating-count">(28 Reviews)</span>
+                </div>
+                <div class="product-specs-snippet">
+                  <span>Mukwa &amp; Leather</span>
+                  <span>Harare Stock</span>
+                </div>
+                <div class="product-price-row">
+                  <div class="price-group">
+                    <span class="price-current">$680.00</span>
+                    <span class="price-was">$820.00</span>
+                  </div>
+                  <span class="currency-unit">USD / ZiG</span>
+                </div>
+                <div class="product-actions">
+                  <button class="btn-card-cart trigger-cart">
+                    <i data-lucide="shopping-bag" style="width: 15px; height: 15px;"></i>
+                    <span>Acquire</span>
+                  </button>
+                  <a href="contact.html" class="btn-card-whatsapp" title="Inquire with Showroom">
+                    <i data-lucide="phone" style="width: 16px; height: 16px;"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Item 2 -->
+            <div class="product-card" data-category="living" data-price="1250" data-material="Deep Bordeaux Velvet & Solid African Mukwa" data-dims="280cm x 105cm x 82cm" data-stock="Harare Showroom Ready">
+              <div class="product-image-box">
+                <span class="card-badge">Bespoke Suite</span>
+                <div class="card-quick-actions">
+                  <button class="card-action-btn trigger-quickview" title="Examine Details"><i data-lucide="eye" style="width: 15px; height: 15px;"></i></button>
+                  <button class="card-action-btn" title="Save to Wishlist" onclick="alert('Added to your Executive Wishlist.')"><i data-lucide="heart" style="width: 15px; height: 15px;"></i></button>
+                </div>
+                <img src="/assets/images/chesterfield.jpg" alt="Palais Bordeaux Chesterfield Sofa" class="product-img">
+              </div>
+              <div class="product-body">
+                <div class="product-cat-name">Living Room Sanctuary</div>
+                <h3 class="product-title">The Palais Bordeaux Chesterfield Sofa</h3>
+                <div class="product-rating">
+                  <i data-lucide="star" style="width: 13px; height: 13px; fill: currentColor;"></i>
+                  <i data-lucide="star" style="width: 13px; height: 13px; fill: currentColor;"></i>
+                  <i data-lucide="star" style="width: 13px; height: 13px; fill: currentColor;"></i>
+                  <i data-lucide="star" style="width: 13px; height: 13px; fill: currentColor;"></i>
+                  <i data-lucide="star" style="width: 13px; height: 13px; fill: currentColor;"></i>
+                  <span class="rating-count">(34 Reviews)</span>
+                </div>
+                <div class="product-specs-snippet">
+                  <span>Tufted Velvet</span>
+                  <span>Handmade</span>
+                </div>
+                <div class="product-price-row">
+                  <div class="price-group">
+                    <span class="price-current">$1,250.00</span>
+                    <span class="price-was">$1,450.00</span>
+                  </div>
+                  <span class="currency-unit">USD / ZiG</span>
+                </div>
+                <div class="product-actions">
+                  <button class="btn-card-cart trigger-cart">
+                    <i data-lucide="shopping-bag" style="width: 15px; height: 15px;"></i>
+                    <span>Acquire</span>
+                  </button>
+                  <a href="contact.html" class="btn-card-whatsapp" title="Inquire with Showroom">
+                    <i data-lucide="phone" style="width: 16px; height: 16px;"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Item 3 -->
+            <div class="product-card" data-category="executive" data-price="1850" data-material="Kiln-Dried Hardwood & Brushed Brass Accents" data-dims="220cm x 100cm x 76cm" data-stock="Harare Showroom Ready">
+              <div class="product-image-box">
+                <span class="card-badge sale">Limited Suite</span>
+                <div class="card-quick-actions">
+                  <button class="card-action-btn trigger-quickview" title="Examine Details"><i data-lucide="eye" style="width: 15px; height: 15px;"></i></button>
+                  <button class="card-action-btn" title="Save to Wishlist" onclick="alert('Added to your Executive Wishlist.')"><i data-lucide="heart" style="width: 15px; height: 15px;"></i></button>
+                </div>
+                <img src="/assets/images/desk.jpg" alt="Chancellery Presidential Desk" class="product-img">
+              </div>
+              <div class="product-body">
+                <div class="product-cat-name">Executive Office</div>
+                <h3 class="product-title">The Chancellery Presidential Desk</h3>
+                <div class="product-rating">
+                  <i data-lucide="star" style="width: 13px; height: 13px; fill: currentColor;"></i>
+                  <i data-lucide="star" style="width: 13px; height: 13px; fill: currentColor;"></i>
+                  <i data-lucide="star" style="width: 13px; height: 13px; fill: currentColor;"></i>
+                  <i data-lucide="star" style="width: 13px; height: 13px; fill: currentColor;"></i>
+                  <i data-lucide="star" style="width: 13px; height: 13px; fill: currentColor;"></i>
+                  <span class="rating-count">(19 Reviews)</span>
+                </div>
+                <div class="product-specs-snippet">
+                  <span>2.2m Desk</span>
+                  <span>Mortise Joinery</span>
+                </div>
+                <div class="product-price-row">
+                  <div class="price-group">
+                    <span class="price-current">$1,850.00</span>
+                    <span class="price-was">$2,100.00</span>
+                  </div>
+                  <span class="currency-unit">USD / ZiG</span>
+                </div>
+                <div class="product-actions">
+                  <button class="btn-card-cart trigger-cart">
+                    <i data-lucide="shopping-bag" style="width: 15px; height: 15px;"></i>
+                    <span>Acquire</span>
+                  </button>
+                  <a href="contact.html" class="btn-card-whatsapp" title="Inquire with Showroom">
+                    <i data-lucide="phone" style="width: 16px; height: 16px;"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Item 4 -->
+            <div class="product-card" data-category="living" data-price="540" data-material="Vintage Saddle Tan Leather & Solid Teak" data-dims="88cm x 92cm x 98cm" data-stock="Harare Showroom Ready">
+              <div class="product-image-box">
+                <span class="card-badge">Armchair</span>
+                <div class="card-quick-actions">
+                  <button class="card-action-btn trigger-quickview" title="Examine Details"><i data-lucide="eye" style="width: 15px; height: 15px;"></i></button>
+                  <button class="card-action-btn" title="Save to Wishlist" onclick="alert('Added to your Executive Wishlist.')"><i data-lucide="heart" style="width: 15px; height: 15px;"></i></button>
+                </div>
+                <img src="/assets/images/armchair.jpg" alt="Kensington Executive Armchair" class="product-img">
+              </div>
+              <div class="product-body">
+                <div class="product-cat-name">Living Room &amp; Library</div>
+                <h3 class="product-title">The Kensington Leather Wingback Chair</h3>
+                <div class="product-rating">
+                  <i data-lucide="star" style="width: 13px; height: 13px; fill: currentColor;"></i>
+                  <i data-lucide="star" style="width: 13px; height: 13px; fill: currentColor;"></i>
+                  <i data-lucide="star" style="width: 13px; height: 13px; fill: currentColor;"></i>
+                  <i data-lucide="star" style="width: 13px; height: 13px; fill: currentColor;"></i>
+                  <i data-lucide="star" style="width: 13px; height: 13px; fill: currentColor;"></i>
+                  <span class="rating-count">(41 Reviews)</span>
+                </div>
+                <div class="product-specs-snippet">
+                  <span>Full-Grain Tan</span>
+                  <span>Brass Studs</span>
+                </div>
+                <div class="product-price-row">
+                  <div class="price-group">
+                    <span class="price-current">$540.00</span>
+                    <span class="price-was">$650.00</span>
+                  </div>
+                  <span class="currency-unit">USD / ZiG</span>
+                </div>
+                <div class="product-actions">
+                  <button class="btn-card-cart trigger-cart">
+                    <i data-lucide="shopping-bag" style="width: 15px; height: 15px;"></i>
+                    <span>Acquire</span>
+                  </button>
+                  <a href="contact.html" class="btn-card-whatsapp" title="Inquire with Showroom">
+                    <i data-lucide="phone" style="width: 16px; height: 16px;"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Item 5 -->
+            <div class="product-card" data-category="dining" data-price="2100" data-material="Single-Slab Indigenous African Mukwa" data-dims="300cm x 115cm x 78cm" data-stock="Harare Showroom Ready">
+              <div class="product-image-box">
+                <span class="card-badge">Banqueting</span>
+                <div class="card-quick-actions">
+                  <button class="card-action-btn trigger-quickview" title="Examine Details"><i data-lucide="eye" style="width: 15px; height: 15px;"></i></button>
+                  <button class="card-action-btn" title="Save to Wishlist" onclick="alert('Added to your Executive Wishlist.')"><i data-lucide="heart" style="width: 15px; height: 15px;"></i></button>
+                </div>
+                <img src="/assets/images/dining.jpg" alt="Grand Sovereign Dining Table" class="product-img">
+              </div>
+              <div class="product-body">
+                <div class="product-cat-name">Dining &amp; Banqueting</div>
+                <h3 class="product-title">Grand Sovereign 10-Seater Mukwa Table</h3>
+                <div class="product-rating">
+                  <i data-lucide="star" style="width: 13px; height: 13px; fill: currentColor;"></i>
+                  <i data-lucide="star" style="width: 13px; height: 13px; fill: currentColor;"></i>
+                  <i data-lucide="star" style="width: 13px; height: 13px; fill: currentColor;"></i>
+                  <i data-lucide="star" style="width: 13px; height: 13px; fill: currentColor;"></i>
+                  <i data-lucide="star" style="width: 13px; height: 13px; fill: currentColor;"></i>
+                  <span class="rating-count">(16 Reviews)</span>
+                </div>
+                <div class="product-specs-snippet">
+                  <span>3.0m Solid Mukwa</span>
+                  <span>Hand Waxed</span>
+                </div>
+                <div class="product-price-row">
+                  <div class="price-group">
+                    <span class="price-current">$2,100.00</span>
+                    <span class="price-was">$2,450.00</span>
+                  </div>
+                  <span class="currency-unit">USD / ZiG</span>
+                </div>
+                <div class="product-actions">
+                  <button class="btn-card-cart trigger-cart">
+                    <i data-lucide="shopping-bag" style="width: 15px; height: 15px;"></i>
+                    <span>Acquire</span>
+                  </button>
+                  <a href="contact.html" class="btn-card-whatsapp" title="Inquire with Showroom">
+                    <i data-lucide="phone" style="width: 16px; height: 16px;"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Item 6 -->
+            <div class="product-card" data-category="bedroom" data-price="1950" data-material="Kiln-Dried Mukwa with Velvet Padded Headboard" data-dims="215cm x 200cm x 165cm" data-stock="Harare Showroom Ready">
+              <div class="product-image-box">
+                <span class="card-badge">Sanctuary</span>
+                <div class="card-quick-actions">
+                  <button class="card-action-btn trigger-quickview" title="Examine Details"><i data-lucide="eye" style="width: 15px; height: 15px;"></i></button>
+                  <button class="card-action-btn" title="Save to Wishlist" onclick="alert('Added to your Executive Wishlist.')"><i data-lucide="heart" style="width: 15px; height: 15px;"></i></button>
+                </div>
+                <img src="/assets/images/bedroom.jpg" alt="Monarch Sovereign King Bed" class="product-img">
+              </div>
+              <div class="product-body">
+                <div class="product-cat-name">Master Bedroom</div>
+                <h3 class="product-title">Monarch Sovereign King Bedstead</h3>
+                <div class="product-rating">
+                  <i data-lucide="star" style="width: 13px; height: 13px; fill: currentColor;"></i>
+                  <i data-lucide="star" style="width: 13px; height: 13px; fill: currentColor;"></i>
+                  <i data-lucide="star" style="width: 13px; height: 13px; fill: currentColor;"></i>
+                  <i data-lucide="star" style="width: 13px; height: 13px; fill: currentColor;"></i>
+                  <i data-lucide="star" style="width: 13px; height: 13px; fill: currentColor;"></i>
+                  <span class="rating-count">(22 Reviews)</span>
+                </div>
+                <div class="product-specs-snippet">
+                  <span>King Size</span>
+                  <span>Hand Carved</span>
+                </div>
+                <div class="product-price-row">
+                  <div class="price-group">
+                    <span class="price-current">$1,950.00</span>
+                    <span class="price-was">$2,300.00</span>
+                  </div>
+                  <span class="currency-unit">USD / ZiG</span>
+                </div>
+                <div class="product-actions">
+                  <button class="btn-card-cart trigger-cart">
+                    <i data-lucide="shopping-bag" style="width: 15px; height: 15px;"></i>
+                    <span>Acquire</span>
+                  </button>
+                  <a href="contact.html" class="btn-card-whatsapp" title="Inquire with Showroom">
+                    <i data-lucide="phone" style="width: 16px; height: 16px;"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Item 7 -->
+            <div class="product-card" data-category="executive" data-price="890" data-material="Solid Teak & Antigravity Brass Rollers" data-dims="180cm x 50cm x 90cm" data-stock="Harare Showroom Ready">
+              <div class="product-image-box">
+                <span class="card-badge">Credenza</span>
+                <div class="card-quick-actions">
+                  <button class="card-action-btn trigger-quickview" title="Examine Details"><i data-lucide="eye" style="width: 15px; height: 15px;"></i></button>
+                  <button class="card-action-btn" title="Save to Wishlist" onclick="alert('Added to your Executive Wishlist.')"><i data-lucide="heart" style="width: 15px; height: 15px;"></i></button>
+                </div>
+                <img src="/assets/images/hero_chair.jpg" alt="Chancellery Lockable Credenza" class="product-img">
+              </div>
+              <div class="product-body">
+                <div class="product-cat-name">Executive Office</div>
+                <h3 class="product-title">Chancellery 3-Tier Lockable Credenza</h3>
+                <div class="product-rating">
+                  <i data-lucide="star" style="width: 13px; height: 13px; fill: currentColor;"></i>
+                  <i data-lucide="star" style="width: 13px; height: 13px; fill: currentColor;"></i>
+                  <i data-lucide="star" style="width: 13px; height: 13px; fill: currentColor;"></i>
+                  <i data-lucide="star" style="width: 13px; height: 13px; fill: currentColor;"></i>
+                  <i data-lucide="star" style="width: 13px; height: 13px; fill: currentColor;"></i>
+                  <span class="rating-count">(11 Reviews)</span>
+                </div>
+                <div class="product-specs-snippet">
+                  <span>Lockable</span>
+                  <span>Solid Teak</span>
+                </div>
+                <div class="product-price-row">
+                  <div class="price-group">
+                    <span class="price-current">$890.00</span>
+                    <span class="price-was">$1,050.00</span>
+                  </div>
+                  <span class="currency-unit">USD / ZiG</span>
+                </div>
+                <div class="product-actions">
+                  <button class="btn-card-cart trigger-cart">
+                    <i data-lucide="shopping-bag" style="width: 15px; height: 15px;"></i>
+                    <span>Acquire</span>
+                  </button>
+                  <a href="contact.html" class="btn-card-whatsapp" title="Inquire with Showroom">
+                    <i data-lucide="phone" style="width: 16px; height: 16px;"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Item 8 -->
+            <div class="product-card" data-category="lighting" data-price="780" data-material="Austrian Lead Crystal & Antiqued Brass" data-dims="85cm Dia x 110cm Drop" data-stock="Harare Showroom Ready">
+              <div class="product-image-box">
+                <span class="card-badge">Lighting</span>
+                <div class="card-quick-actions">
+                  <button class="card-action-btn trigger-quickview" title="Examine Details"><i data-lucide="eye" style="width: 15px; height: 15px;"></i></button>
+                  <button class="card-action-btn" title="Save to Wishlist" onclick="alert('Added to your Executive Wishlist.')"><i data-lucide="heart" style="width: 15px; height: 15px;"></i></button>
+                </div>
+                <img src="/assets/images/cat_lighting.jpg" alt="Chandelier" class="product-img">
+              </div>
+              <div class="product-body">
+                <div class="product-cat-name">Chandeliers &amp; Royal Décor</div>
+                <h3 class="product-title">The Sovereign 12-Tier Crystal Chandelier</h3>
+                <div class="product-rating">
+                  <i data-lucide="star" style="width: 13px; height: 13px; fill: currentColor;"></i>
+                  <i data-lucide="star" style="width: 13px; height: 13px; fill: currentColor;"></i>
+                  <i data-lucide="star" style="width: 13px; height: 13px; fill: currentColor;"></i>
+                  <i data-lucide="star" style="width: 13px; height: 13px; fill: currentColor;"></i>
+                  <i data-lucide="star" style="width: 13px; height: 13px; fill: currentColor;"></i>
+                  <span class="rating-count">(15 Reviews)</span>
+                </div>
+                <div class="product-specs-snippet">
+                  <span>Lead Crystal</span>
+                  <span>Warm Brass</span>
+                </div>
+                <div class="product-price-row">
+                  <div class="price-group">
+                    <span class="price-current">$780.00</span>
+                    <span class="price-was">$920.00</span>
+                  </div>
+                  <span class="currency-unit">USD / ZiG</span>
+                </div>
+                <div class="product-actions">
+                  <button class="btn-card-cart trigger-cart">
+                    <i data-lucide="shopping-bag" style="width: 15px; height: 15px;"></i>
+                    <span>Acquire</span>
+                  </button>
+                  <a href="contact.html" class="btn-card-whatsapp" title="Inquire with Showroom">
+                    <i data-lucide="phone" style="width: 16px; height: 16px;"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Item 9 -->
+            <div class="product-card" data-category="living" data-price="960" data-material="Kiln-Dried Mukwa & Natural Sisal Inlay" data-dims="140cm x 80cm x 45cm" data-stock="Harare Showroom Ready">
+              <div class="product-image-box">
+                <span class="card-badge">Living</span>
+                <div class="card-quick-actions">
+                  <button class="card-action-btn trigger-quickview" title="Examine Details"><i data-lucide="eye" style="width: 15px; height: 15px;"></i></button>
+                  <button class="card-action-btn" title="Save to Wishlist" onclick="alert('Added to your Executive Wishlist.')"><i data-lucide="heart" style="width: 15px; height: 15px;"></i></button>
+                </div>
+                <img src="/assets/images/cat_living.jpg" alt="Living Salon Coffee Table" class="product-img">
+              </div>
+              <div class="product-body">
+                <div class="product-cat-name">Living Room Sanctuary</div>
+                <h3 class="product-title">The Palais Mukwa Low Cocktail Table</h3>
+                <div class="product-rating">
+                  <i data-lucide="star" style="width: 13px; height: 13px; fill: currentColor;"></i>
+                  <i data-lucide="star" style="width: 13px; height: 13px; fill: currentColor;"></i>
+                  <i data-lucide="star" style="width: 13px; height: 13px; fill: currentColor;"></i>
+                  <i data-lucide="star" style="width: 13px; height: 13px; fill: currentColor;"></i>
+                  <i data-lucide="star" style="width: 13px; height: 13px; fill: currentColor;"></i>
+                  <span class="rating-count">(27 Reviews)</span>
+                </div>
+                <div class="product-specs-snippet">
+                  <span>Mukwa Grain</span>
+                  <span>Brass Legs</span>
+                </div>
+                <div class="product-price-row">
+                  <div class="price-group">
+                    <span class="price-current">$960.00</span>
+                    <span class="price-was">$1,150.00</span>
+                  </div>
+                  <span class="currency-unit">USD / ZiG</span>
+                </div>
+                <div class="product-actions">
+                  <button class="btn-card-cart trigger-cart">
+                    <i data-lucide="shopping-bag" style="width: 15px; height: 15px;"></i>
+                    <span>Acquire</span>
+                  </button>
+                  <a href="contact.html" class="btn-card-whatsapp" title="Inquire with Showroom">
+                    <i data-lucide="phone" style="width: 16px; height: 16px;"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Item 10 -->
+            <div class="product-card" data-category="outdoor" data-price="1150" data-material="Weather-Treated Zambezi Teak & Sunbrella Canvas" data-dims="200cm x 90cm x 65cm" data-stock="Harare Showroom Ready">
+              <div class="product-image-box">
+                <span class="card-badge">Veranda</span>
+                <div class="card-quick-actions">
+                  <button class="card-action-btn trigger-quickview" title="Examine Details"><i data-lucide="eye" style="width: 15px; height: 15px;"></i></button>
+                  <button class="card-action-btn" title="Save to Wishlist" onclick="alert('Added to your Executive Wishlist.')"><i data-lucide="heart" style="width: 15px; height: 15px;"></i></button>
+                </div>
+                <img src="/assets/images/cat_outdoor.jpg" alt="Zambezi Teak Veranda Lounge" class="product-img">
+              </div>
+              <div class="product-body">
+                <div class="product-cat-name">Veranda &amp; Outdoor Luxury</div>
+                <h3 class="product-title">Zambezi Teak Veranda Daybed Lounge</h3>
+                <div class="product-rating">
+                  <i data-lucide="star" style="width: 13px; height: 13px; fill: currentColor;"></i>
+                  <i data-lucide="star" style="width: 13px; height: 13px; fill: currentColor;"></i>
+                  <i data-lucide="star" style="width: 13px; height: 13px; fill: currentColor;"></i>
+                  <i data-lucide="star" style="width: 13px; height: 13px; fill: currentColor;"></i>
+                  <i data-lucide="star" style="width: 13px; height: 13px; fill: currentColor;"></i>
+                  <span class="rating-count">(18 Reviews)</span>
+                </div>
+                <div class="product-specs-snippet">
+                  <span>Solid Teak</span>
+                  <span>Weatherproof</span>
+                </div>
+                <div class="product-price-row">
+                  <div class="price-group">
+                    <span class="price-current">$1,150.00</span>
+                    <span class="price-was">$1,380.00</span>
+                  </div>
+                  <span class="currency-unit">USD / ZiG</span>
+                </div>
+                <div class="product-actions">
+                  <button class="btn-card-cart trigger-cart">
+                    <i data-lucide="shopping-bag" style="width: 15px; height: 15px;"></i>
+                    <span>Acquire</span>
+                  </button>
+                  <a href="contact.html" class="btn-card-whatsapp" title="Inquire with Showroom">
+                    <i data-lucide="phone" style="width: 16px; height: 16px;"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Item 11 -->
+            <div class="product-card" data-category="bedroom" data-price="2400" data-material="Solid Indigenous Mukwa & Antique Brass Hardware" data-dims="220cm x 65cm x 210cm" data-stock="Harare Showroom Ready">
+              <div class="product-image-box">
+                <span class="card-badge">Armoire</span>
+                <div class="card-quick-actions">
+                  <button class="card-action-btn trigger-quickview" title="Examine Details"><i data-lucide="eye" style="width: 15px; height: 15px;"></i></button>
+                  <button class="card-action-btn" title="Save to Wishlist" onclick="alert('Added to your Executive Wishlist.')"><i data-lucide="heart" style="width: 15px; height: 15px;"></i></button>
+                </div>
+                <img src="/assets/images/cat_bedroom.jpg" alt="Imperial Mukwa Double Armoire" class="product-img">
+              </div>
+              <div class="product-body">
+                <div class="product-cat-name">Master Bedroom Sanctuary</div>
+                <h3 class="product-title">Imperial Mukwa 4-Door Armoire</h3>
+                <div class="product-rating">
+                  <i data-lucide="star" style="width: 13px; height: 13px; fill: currentColor;"></i>
+                  <i data-lucide="star" style="width: 13px; height: 13px; fill: currentColor;"></i>
+                  <i data-lucide="star" style="width: 13px; height: 13px; fill: currentColor;"></i>
+                  <i data-lucide="star" style="width: 13px; height: 13px; fill: currentColor;"></i>
+                  <i data-lucide="star" style="width: 13px; height: 13px; fill: currentColor;"></i>
+                  <span class="rating-count">(9 Reviews)</span>
+                </div>
+                <div class="product-specs-snippet">
+                  <span>Cedar Lined</span>
+                  <span>Hand Carved</span>
+                </div>
+                <div class="product-price-row">
+                  <div class="price-group">
+                    <span class="price-current">$2,400.00</span>
+                    <span class="price-was">$2,800.00</span>
+                  </div>
+                  <span class="currency-unit">USD / ZiG</span>
+                </div>
+                <div class="product-actions">
+                  <button class="btn-card-cart trigger-cart">
+                    <i data-lucide="shopping-bag" style="width: 15px; height: 15px;"></i>
+                    <span>Acquire</span>
+                  </button>
+                  <a href="contact.html" class="btn-card-whatsapp" title="Inquire with Showroom">
+                    <i data-lucide="phone" style="width: 16px; height: 16px;"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Item 12 -->
+            <div class="product-card" data-category="dining" data-price="3800" data-material="Monumental Solid Mukwa & Top-Grain Leather Chairs" data-dims="420cm x 140cm x 78cm" data-stock="Harare Showroom Ready">
+              <div class="product-image-box">
+                <span class="card-badge sale">Master Suite</span>
+                <div class="card-quick-actions">
+                  <button class="card-action-btn trigger-quickview" title="Examine Details"><i data-lucide="eye" style="width: 15px; height: 15px;"></i></button>
+                  <button class="card-action-btn" title="Save to Wishlist" onclick="alert('Added to your Executive Wishlist.')"><i data-lucide="heart" style="width: 15px; height: 15px;"></i></button>
+                </div>
+                <img src="/assets/images/workshop.jpg" alt="Presidential Commission Suite" class="product-img">
+              </div>
+              <div class="product-body">
+                <div class="product-cat-name">Diplomatic &amp; Boardroom</div>
+                <h3 class="product-title">The Sovereign Presidential Boardroom Suite</h3>
+                <div class="product-rating">
+                  <i data-lucide="star" style="width: 13px; height: 13px; fill: currentColor;"></i>
+                  <i data-lucide="star" style="width: 13px; height: 13px; fill: currentColor;"></i>
+                  <i data-lucide="star" style="width: 13px; height: 13px; fill: currentColor;"></i>
+                  <i data-lucide="star" style="width: 13px; height: 13px; fill: currentColor;"></i>
+                  <i data-lucide="star" style="width: 13px; height: 13px; fill: currentColor;"></i>
+                  <span class="rating-count">(31 Reviews)</span>
+                </div>
+                <div class="product-specs-snippet">
+                  <span>4.2m Table</span>
+                  <span>14 Armchairs</span>
+                </div>
+                <div class="product-price-row">
+                  <div class="price-group">
+                    <span class="price-current">$3,800.00</span>
+                    <span class="price-was">$4,500.00</span>
+                  </div>
+                  <span class="currency-unit">USD / ZiG</span>
+                </div>
+                <div class="product-actions">
+                  <button class="btn-card-cart trigger-cart">
+                    <i data-lucide="shopping-bag" style="width: 15px; height: 15px;"></i>
+                    <span>Acquire</span>
+                  </button>
+                  <a href="contact.html" class="btn-card-whatsapp" title="Inquire with Showroom">
+                    <i data-lucide="phone" style="width: 16px; height: 16px;"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </main>
+      </div>
+    </div>
+
+    <!-- Luxury Footer -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div>
+            <div class="brand-identity">
+              <img src="/assets/images/logo.png" alt="Royal Decaux Logo" class="brand-logo-img">
+              <span class="brand-name" style="color: var(--royal-blue);">ROYAL <span style="color: var(--champagne-gold);">DECAUX</span></span>
+            </div>
+            <p class="footer-brand-p" style="margin-top: 1rem; color: var(--text-muted); font-size: 0.86rem; line-height: 1.65;">
+              Zimbabwe's foremost purveyor of solid African mukwa, kiln-dried teak, and Italian leather furnishings. Curating aristocratic interiors since inception.
+            </p>
+          </div>
+
+          <div>
+            <h4>The Collections</h4>
+            <ul class="footer-links">
+              <li><a href="shop.html?cat=executive" class="footer-link">Executive Desks &amp; Thrones</a></li>
+              <li><a href="shop.html?cat=living" class="footer-link">Chesterfields &amp; Lounges</a></li>
+              <li><a href="shop.html?cat=dining" class="footer-link">Solid Mukwa Dining Suites</a></li>
+              <li><a href="shop.html?cat=bedroom" class="footer-link">Master Bedroom Sanctuaries</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h4>Private Client Desk</h4>
+            <ul class="footer-links">
+              <li><a href="contact.html" class="footer-link">Book Showroom Viewing</a></li>
+              <li><a href="about.html" class="footer-link">Our Mukwa &amp; Teak Heritage</a></li>
+              <li><a href="checkout.html" class="footer-link">Private Acquisitions</a></li>
+              <li><a href="https://wa.me/263771000000" target="_blank" class="footer-link">Direct Line to Showroom</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h4>Flagship Gallery</h4>
+            <div class="footer-contact-item">
+              <i data-lucide="map-pin" style="width: 16px; height: 16px;"></i>
+              <span>Borrowdale Road &bull; Harare, Zimbabwe</span>
+            </div>
+            <div class="footer-contact-item">
+              <i data-lucide="clock" style="width: 16px; height: 16px;"></i>
+              <span>Monday – Saturday &bull; 08:30 – 17:30</span>
+            </div>
+            <div class="footer-contact-item">
+              <i data-lucide="phone" style="width: 16px; height: 16px;"></i>
+              <span>+263 (0) 77 100 0000</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <div>&copy; 2026 Royal Decaux. All Rights Reserved.</div>
+          <div>White-Glove Nationwide Logistics &bull; Harare &bull; Bulawayo &bull; Victoria Falls</div>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+
+  <!-- Cart Drawer -->
+  <div class="cart-drawer-overlay" id="cartDrawerOverlay"></div>
+  <div class="cart-drawer" id="cartDrawer">
+    <div class="cart-drawer-header">
+      <h3>Basket (3)</h3>
+      <button class="modal-close-icon" id="closeCartBtn" style="position: static;">
+        <i data-lucide="x" style="width: 16px; height: 16px;"></i>
+      </button>
+    </div>
+    <div class="cart-drawer-body">
+      <div class="order-item-row">
+        <img src="/assets/images/exec_chair.jpg" alt="Chair" class="order-item-img">
+        <div class="order-item-info">
+          <div class="order-item-name">The Sovereign Executive Throne</div>
+          <div class="order-item-meta">Italian Leather &bull; Qty: 1</div>
+          <div class="order-item-price">$680.00 USD</div>
+        </div>
+      </div>
+      <div class="order-item-row">
+        <img src="/assets/images/chesterfield.jpg" alt="Sofa" class="order-item-img">
+        <div class="order-item-info">
+          <div class="order-item-name">Palais Bordeaux Chesterfield</div>
+          <div class="order-item-meta">Wine Velvet &bull; Qty: 1</div>
+          <div class="order-item-price">$1,250.00 USD</div>
+        </div>
+      </div>
+      <div class="order-item-row">
+        <img src="/assets/images/armchair.jpg" alt="Armchair" class="order-item-img">
+        <div class="order-item-info">
+          <div class="order-item-name">Kensington Leather Armchair</div>
+          <div class="order-item-meta">Saddle Tan &bull; Qty: 1</div>
+          <div class="order-item-price">$540.00 USD</div>
+        </div>
+      </div>
+    </div>
+    <div class="cart-drawer-footer">
+      <div class="summary-calc-row">
+        <span>Curated Subtotal</span>
+        <span>$2,470.00 USD</span>
+      </div>
+      <div class="summary-calc-row">
+        <span>White-Glove Installation</span>
+        <span style="color: var(--champagne-gold); font-weight: 600;">Complimentary</span>
+      </div>
+      <div class="summary-calc-row total">
+        <span>Total Investment</span>
+        <span>$2,470.00 USD</span>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 0.75rem; margin-top: 1.5rem;">
+        <a href="checkout.html" class="btn-royal" style="width: 100%; text-align: center;">Proceed To Checkout</a>
+        <a href="contact.html" class="btn-crimson" style="width: 100%; text-align: center;">Contact Showroom</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Quick View Modal -->
+  <div class="modal-overlay" id="quickViewModal">
+    <div class="modal-glass-container">
+      <button class="modal-close-icon" id="closeQuickView">
+        <i data-lucide="x" style="width: 18px; height: 18px;"></i>
+      </button>
+      <div class="modal-img-showcase">
+        <img id="modalImg" src="/assets/images/hero_chair.jpg" alt="Selected Product">
+      </div>
+      <div class="modal-info-box">
+        <div id="modalCategory" style="font-size: 0.72rem; color: var(--champagne-gold); text-transform: uppercase; font-family: var(--font-accent); letter-spacing: 0.15em; font-weight: 700; margin-bottom: 0.4rem;">Category</div>
+        <h2 id="modalTitle" class="modal-product-title">Product Name</h2>
+        <div style="display: flex; align-items: baseline; gap: 0.75rem;">
+          <div id="modalPrice" class="modal-price-tag">$0 USD</div>
+          <div id="modalWasPrice" style="text-decoration: line-through; color: var(--text-muted); font-size: 1.1rem; font-weight: 600;"></div>
+        </div>
+        <table class="spec-list-table">
+          <tr>
+            <td>Materials</td>
+            <td id="modalMaterial">Solid Teak &amp; Italian Leather</td>
+          </tr>
+          <tr>
+            <td>Dimensions</td>
+            <td id="modalDimensions">220cm x 100cm x 76cm</td>
+          </tr>
+          <tr>
+            <td>Showroom Display</td>
+            <td id="modalStock" style="color: #174e2d; font-weight: 700;">Harare Showroom Ready</td>
+          </tr>
+          <tr>
+            <td>Warranty</td>
+            <td>5-Year Royal Decaux Guarantee</td>
+          </tr>
+        </table>
+        <div style="display: flex; gap: 0.75rem; margin-top: auto;">
+          <button class="btn-royal trigger-cart" style="flex: 1;">
+            <i data-lucide="shopping-bag" style="width: 16px; height: 16px;"></i>
+            <span>Acquire</span>
+          </button>
+          <a id="modalWhatsAppBtn" href="contact.html" class="btn-crimson" style="flex: 1; text-align: center;">
+            <i data-lucide="phone" style="width: 16px; height: 16px;"></i>
+            <span>Contact Us</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="/assets/js/main.js"></script>
+  <script>
+    lucide.createIcons();
+
+    function filterCatalogue(category) {
+      const cards = document.querySelectorAll('#catalogueProductGrid .product-card');
+      let visible = 0;
+      cards.forEach(card => {
+        if (category === 'all' || card.dataset.category === category) {
+          card.style.display = 'flex';
+          visible++;
+        } else {
+          card.style.display = 'none';
+        }
+      });
+      document.getElementById('displayedCount').innerText = visible;
+    }
+  </script>
+  <script src="/assets/js/mobile-nav.js?v=25.0"></script>
+  <script src="/assets/js/main.js"></script>
+  <script>
+    lucide.createIcons();
+  </script>
+</body>
+</html>

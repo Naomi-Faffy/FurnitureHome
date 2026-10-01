@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Cache-Control" content="no-store, no-cache, must-revalidate, max-age=0">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+  <title>Royal Decaux</title>
+  
+  <!-- Favicon using uploaded logo -->
+  <link rel="icon" type="image/png" href="/assets/images/logo.png">
+  <link rel="shortcut icon" type="image/png" href="/assets/images/logo.png">
+
+  <!-- Master Luxury Design System (Cream Linen & Sovereign Royal Blue) -->
+  <link rel="stylesheet" href="/assets/css/luxury-master.css?v=25.0">
+  <link rel="stylesheet" href="/assets/css/style.css?v=25.0">
+  <link rel="stylesheet" href="/assets/css/responsive-shield.css?v=25.0">
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <style>
+    /* ==========================================================================
+       HERITAGE PAGE - CLEAN EDITORIAL ATELIER ARCHITECTURE
+       ========================================================================== */
+    .heritage-hero-section {
+      padding: 4.5rem 0 3rem;
+      text-align: center;
+      background: linear-gradient(180deg, rgba(237, 228, 213, 0.45) 0%, rgba(250, 246, 237, 0) 100%);
+      border-bottom: 1px solid var(--border-gold);
+      margin-bottom: 4rem;
+    }
+
+    .heritage-hallmark-badge {
+      display: inline-flex;
+      align-items: center;
+      padding: 0.4rem 1.1rem;
+      background: rgba(184, 146, 75, 0.12);
+      border: 1px solid var(--border-gold);
+      border-radius: 9999px;
+      font-family: var(--font-accent);
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--champagne-gold-dark);
+      margin-bottom: 1.25rem;
+    }
+
+    /* Structured 2-Column Split Feature */
+    .heritage-feature-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4.5rem;
+      align-items: center;
+      margin-bottom: 5.5rem;
+    }
+
+    .heritage-text-col {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .heritage-section-title {
+      font-family: var(--font-display);
+      font-size: 2.6rem;
+      line-height: 1.2;
+      color: var(--royal-blue);
+      font-weight: 700;
+      margin-bottom: 1.25rem;
+    }
+
+    .heritage-section-title .title-italic {
+      font-style: italic;
+      font-weight: 400;
+      color: var(--champagne-gold-dark);
+    }
+
+    .heritage-lead-p {
+      font-size: 1.05rem;
+      line-height: 1.85;
+      color: var(--text-body);
+      margin-bottom: 1.5rem;
+    }
+
+    .heritage-quote-card {
+      background: #ffffff;
+      border-left: 3px solid var(--champagne-gold);
+      border-top: 1px solid var(--border-gold);
+      border-right: 1px solid var(--border-gold);
+      border-bottom: 1px solid var(--border-gold);
+      border-radius: var(--radius-sm);
+      padding: 1.6rem 1.85rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 4px 18px rgba(14, 36, 77, 0.04);
+    }
+
+    .heritage-quote-card p {
+      font-family: var(--font-display);
+      font-style: italic;
+      font-size: 1.12rem;
+      line-height: 1.65;
+      color: var(--royal-blue);
+      margin: 0 0 0.6rem 0;
+    }
+
+    .heritage-quote-card cite {
+      display: block;
+      font-family: var(--font-accent);
+      font-style: normal;
+      font-size: 0.75rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--champagne-gold-dark);
+      font-weight: 700;
+    }
+
+    /* Balanced Image Frames */
+    .heritage-img-frame {
+      position: relative;
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      border: 1px solid var(--border-gold);
+      box-shadow: 0 15px 35px rgba(14, 36, 77, 0.1);
+      background: var(--bg-cream-surface);
+      height: 460px;
+    }
+
+    .heritage-img-frame img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .heritage-img-frame:hover img {
+      transform: scale(1.03);
+    }
+
+    .heritage-caption-badge {
+      position: absolute;
+      bottom: 1.25rem;
+      left: 1.25rem;
+      right: 1.25rem;
+      background: rgba(250, 246, 237, 0.94);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border: 1px solid var(--border-gold);
+      border-radius: var(--radius-sm);
+      padding: 0.85rem 1.25rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.8rem;
+    }
+
+    .heritage-caption-badge strong {
+      font-family: var(--font-accent);
+      color: var(--royal-blue);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    .heritage-caption-badge span {
+      color: var(--text-muted);
+    }
+
+    /* Key Spec Metric Box */
+    .spec-matrix-box {
+      background: #ffffff;
+      border: 1px solid var(--border-gold);
+      border-radius: var(--radius-sm);
+      padding: 1.25rem 1.5rem;
+      margin-bottom: 1.75rem;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem 1.75rem;
+      font-size: 0.85rem;
+      box-shadow: 0 4px 15px rgba(14, 36, 77, 0.03);
+    }
+
+    .spec-matrix-item {
+      display: flex;
+      flex-direction: column;
+      gap: 0.2rem;
+    }
+
+    .spec-matrix-item .k {
+      font-family: var(--font-accent);
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--text-muted);
+      font-weight: 600;
+    }
+
+    .spec-matrix-item .v {
+      font-weight: 700;
+      color: var(--royal-blue);
+      font-size: 0.92rem;
+    }
+
+    /* Harmonious Showroom Invitation Card */
+    .showroom-invite-card {
+      background: #ffffff;
+      border: 1px solid var(--border-gold);
+      border-radius: var(--radius-md);
+      padding: 4rem 2.5rem;
+      margin: 1rem 0 5rem;
+      text-align: center;
+      box-shadow: 0 10px 30px rgba(14, 36, 77, 0.06);
+      position: relative;
+    }
+
+    .showroom-invite-logo {
+      height: 48px;
+      margin-bottom: 1.25rem;
+    }
+
+    /* Responsive */
+    @media (max-width: 992px) {
+      .heritage-feature-row {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+        margin-bottom: 4rem;
+      }
+      .heritage-img-frame {
+        height: 360px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Solid Luxury Sticky Navigation (100% Identical Across All Pages) -->
+  <header class="site-header">
+    <div class="container">
+      <div class="header-inner">
+        <!-- Brand Identity -->
+        <a href="index.html" class="brand-identity">
+          <img src="/assets/images/logo.png" alt="Royal Decaux Logo" class="brand-logo-img">
+          <span class="brand-name">ROYAL <span>DECAUX</span></span>
+        </a>
+
+        <!-- Main Navigation Links (Single-Word, Single-Line, Never Wraps) -->
+        <nav class="main-nav">
+          <a href="index.html" class="nav-link">Home</a>
+          <a href="shop.html" class="nav-link">Catalogue</a>
+          <a href="index.html#categories" class="nav-link">Rooms</a>
+          <a href="index.html#deals" class="nav-link">Exhibition</a>
+          <a href="about.html" class="nav-link active">Heritage</a>
+          <a href="contact.html" class="nav-link">Showroom</a>
+        </nav>
+
+        <!-- Search, Wishlist, Cart & Contact Actions -->
+        <div class="header-actions">
+          <div class="glass-search-box">
+            <i data-lucide="search" style="width: 15px; height: 15px; color: var(--text-muted);"></i>
+            <input type="text" id="siteSearchInput" placeholder="Search archive...">
+          </div>
+
+          <button class="icon-btn" title="Saved Wishlist" onclick="alert('Your Executive Wishlist is saved.')">
+            <i data-lucide="heart" style="width: 17px; height: 17px;"></i>
+          </button>
+
+          <button class="icon-btn trigger-cart" title="Shopping Basket">
+            <i data-lucide="shopping-bag" style="width: 17px; height: 17px;"></i>
+            <span class="badge-count">3</span>
+          </button>
+
+          <a href="contact.html" class="btn-concierge">
+            <i data-lucide="phone" style="width: 15px; height: 15px;"></i>
+            <span>Contact</span>
+          </a>
+
+          <!-- Mobile Hamburger Toggle -->
+          <button class="mobile-toggle-btn" id="mobileMenuBtn" aria-label="Toggle navigation" onclick="window.openRoyalMobileNav ? window.openRoyalMobileNav(event) : (document.getElementById('mobileNavDrawer').classList.add('active'), document.getElementById('mobileNavOverlay').classList.add('active'), document.body.style.overflow='hidden');">
+            <i data-lucide="menu" style="width: 20px; height: 20px;"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation Drawer -->
+  <div class="mobile-nav-overlay" id="mobileNavOverlay" onclick="window.closeRoyalMobileNav ? window.closeRoyalMobileNav(event) : (document.getElementById('mobileNavDrawer').classList.remove('active'), document.getElementById('mobileNavOverlay').classList.remove('active'), document.body.style.overflow='');"></div>
+  <div class="mobile-nav-drawer" id="mobileNavDrawer">
+    <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border-gold); padding-bottom: 1rem;">
+      <div class="brand-identity">
+        <img src="/assets/images/logo.png" alt="Royal Decaux" style="height: 38px;">
+        <span class="brand-name" style="font-size: 1.1rem;">ROYAL <span>DECAUX</span></span>
+      </div>
+      <button class="modal-close-icon" id="closeMobileNavBtn" style="position: static;" onclick="window.closeRoyalMobileNav ? window.closeRoyalMobileNav(event) : (document.getElementById('mobileNavDrawer').classList.remove('active'), document.getElementById('mobileNavOverlay').classList.remove('active'), document.body.style.overflow='');">
+        <i data-lucide="x" style="width: 16px; height: 16px;"></i>
+      </button>
+    </div>
+
+    <nav class="mobile-nav-links">
+      <a href="index.html" class="mobile-nav-link">Home</a>
+      <a href="shop.html" class="mobile-nav-link">Catalogue</a>
+      <a href="index.html#categories" class="mobile-nav-link">Rooms</a>
+      <a href="index.html#deals" class="mobile-nav-link">Exhibition</a>
+      <a href="about.html" class="mobile-nav-link active">Heritage</a>
+      <a href="contact.html" class="mobile-nav-link">Showroom</a>
+    </nav>
+
+    <div style="margin-top: auto; padding-top: 1.5rem; border-top: 1px solid var(--border-gold);">
+      <a href="contact.html" class="btn-royal" style="width: 100%; text-align: center; margin-bottom: 0.75rem;">
+        <i data-lucide="phone" style="width: 16px; height: 16px;"></i>
+        <span>Contact Us</span>
+      </a>
+      <p style="font-size: 0.75rem; color: var(--text-muted); text-align: center;">Borrowdale Road &bull; Harare, Zimbabwe</p>
+    </div>
+  </div>
+
+  <div class="site-wrapper">
+
+    <!-- Section 1: Hero Header -->
+    <section class="heritage-hero-section">
+      <div class="container">
+        <div class="heritage-hallmark-badge">
+          <span>Harare Atelier &bull; Provenance &amp; Craft</span>
+        </div>
+        <h1 class="hero-title" style="margin-bottom: 0.75rem;">The Architecture of Aristocratic Living</h1>
+        <p class="section-desc" style="max-width: 720px; margin: 0 auto;">
+          Honoring solid Zimbabwean Mukwa, kiln-dried Zambezi Teak, and Florentine leather upholstery disciplines.
+        </p>
+      </div>
+    </section>
+
+    <!-- Section 2: Master Feature Split (Workshop Story) -->
+    <div class="container">
+      <div class="heritage-feature-row">
+        <!-- Text Column -->
+        <div class="heritage-text-col">
+          <span class="hero-badge-tag" style="margin-bottom: 0.75rem; width: fit-content;">Atelier Philosophy</span>
+          <h2 class="heritage-section-title">
+            Furniture as an<br>
+            <span class="title-italic">Heirloom of Authority.</span>
+          </h2>
+          
+          <p class="heritage-lead-p">
+            At Royal Decaux, we believe an executive environment speaks before a single word is uttered. The commanding weight of seasoned African Mukwa, the subtle botanical aroma of hand-burnished cowhide, and the quiet precision of mortise-and-tenon joinery form an unmistakable statement of permanence.
+          </p>
+
+          <div class="heritage-quote-card">
+            <p>
+              "We do not design for the trend of a fleeting season. We build for the lineage of decades, bringing quiet luxury, noble comfort, and sovereign dignity into Zimbabwe's most distinguished homes."
+            </p>
+            <cite>Office of the Master Joiner &bull; Harare Atelier</cite>
+          </div>
+
+          <p style="font-size: 0.95rem; line-height: 1.8; color: var(--text-muted); margin-bottom: 2rem;">
+            Every commission is sculpted by senior Zimbabwean artisans in our Harare workshops. From single-slab banquet tables to deep-buttoned velvet Chesterfields, each piece is engineered without synthetic veneers or pneumatic shortcuts.
+          </p>
+
+          <div class="hero-buttons">
+            <a href="shop.html" class="btn-royal">
+              <span>Explore The Archive</span>
+            </a>
+            <a href="contact.html" class="btn-glass-cream">
+              <span>Arrange Showroom Visit</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Image Column (Properly Proportioned, 460px Container) -->
+        <div>
+          <div class="heritage-img-frame">
+            <img src="/assets/images/workshop.jpg" alt="Royal Decaux Harare Atelier">
+            <div class="heritage-caption-badge">
+              <strong>Harare Atelier</strong>
+              <span>Master Joiners Hand-Planing African Mukwa</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Section 3: Alternating Feature Split (Living Timber Provenance) -->
+    <div class="container">
+      <div class="heritage-feature-row">
+        <!-- Image Column on Left -->
+        <div>
+          <div class="heritage-img-frame">
+            <img src="/assets/images/dining.jpg" alt="Solid Mukwa Banqueting Table">
+            <div class="heritage-caption-badge">
+              <strong>Solid Mukwa Table</strong>
+              <span>Single-Slab Banqueting Architecture</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Text Column on Right -->
+        <div class="heritage-text-col">
+          <span class="hero-badge-tag" style="margin-bottom: 0.75rem; width: fit-content;">Timber Anatomy</span>
+          <h2 class="heritage-section-title">
+            The Living Grain of the<br>
+            <span class="title-italic">Zambezi River Basin.</span>
+          </h2>
+          
+          <p class="heritage-lead-p">
+            African Mukwa (<em>Pterocarpus angolensis</em>) is revered for its high resin density, flame retardance, and total natural immunity to wood-borer insects. Its golden-amber heartwood possesses an iridescent depth that deepens with age.
+          </p>
+
+          <div class="spec-matrix-box">
+            <div class="spec-matrix-item">
+              <span class="k">Botanical Species</span>
+              <span class="v">Pterocarpus angolensis</span>
+            </div>
+            <div class="spec-matrix-item">
+              <span class="k">Janka Hardness</span>
+              <span class="v">1,260 lbf</span>
+            </div>
+            <div class="spec-matrix-item">
+              <span class="k">Timber Density</span>
+              <span class="v">660 kg/m³</span>
+            </div>
+            <div class="spec-matrix-item">
+              <span class="k">Surface Luster</span>
+              <span class="v">Hand-Rubbed Carnauba Wax</span>
+            </div>
+          </div>
+
+          <p style="font-size: 0.95rem; line-height: 1.8; color: var(--text-muted); margin-bottom: 2rem;">
+            A dining table or presidential desk is where decisions of state and family legacies are cast. Each Royal Decaux commission is hand-finished with natural carnauba wax to preserve the breathing timber grain.
+          </p>
+
+          <div class="hero-buttons">
+            <a href="shop.html?cat=dining" class="btn-royal">
+              <span>View Dining Suites</span>
+            </a>
+            <a href="contact.html" class="btn-glass-cream">
+              <span>Commission Custom Piece</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Section 4: Harmonious Showroom Invitation Card -->
+    <div class="container">
+      <div class="showroom-invite-card">
+        <img src="/assets/images/logo.png" alt="Royal Decaux Logo" class="showroom-invite-logo">
+        <h2 style="font-family: var(--font-display); font-size: 2.2rem; color: var(--royal-blue); margin-bottom: 0.75rem;">
+          Experience Royal Decaux in Harare
+        </h2>
+        <p style="font-size: 1rem; line-height: 1.75; color: var(--text-muted); max-width: 650px; margin: 0 auto 2.25rem;">
+          Our Borrowdale Flagship Gallery features fully realized executive suites, boardroom settings, and private residential sanctuaries. Private appointments available Monday through Saturday.
+        </p>
+        <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+          <a href="shop.html" class="btn-royal">
+            <span>Explore The Archive</span>
+          </a>
+          <a href="contact.html" class="btn-crimson">
+            <span>Book Private Viewing</span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Luxury Footer -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div>
+            <div class="brand-identity">
+              <img src="/assets/images/logo.png" alt="Royal Decaux Logo" class="brand-logo-img">
+              <span class="brand-name" style="color: var(--royal-blue);">ROYAL <span style="color: var(--champagne-gold);">DECAUX</span></span>
+            </div>
+            <p class="footer-brand-p" style="margin-top: 1rem; color: var(--text-muted); font-size: 0.86rem; line-height: 1.65;">
+              Zimbabwe's foremost purveyor of solid African mukwa, kiln-dried teak, and Italian leather furnishings. Curating aristocratic interiors since inception.
+            </p>
+          </div>
+
+          <div>
+            <h4>The Collections</h4>
+            <ul class="footer-links">
+              <li><a href="shop.html?cat=executive" class="footer-link">Executive Desks &amp; Thrones</a></li>
+              <li><a href="shop.html?cat=living" class="footer-link">Chesterfields &amp; Lounges</a></li>
+              <li><a href="shop.html?cat=dining" class="footer-link">Solid Mukwa Dining Suites</a></li>
+              <li><a href="shop.html?cat=bedroom" class="footer-link">Master Bedroom Sanctuaries</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h4>Private Client Desk</h4>
+            <ul class="footer-links">
+              <li><a href="contact.html" class="footer-link">Book Showroom Viewing</a></li>
+              <li><a href="about.html" class="footer-link">Our Mukwa &amp; Teak Heritage</a></li>
+              <li><a href="checkout.html" class="footer-link">Private Acquisitions</a></li>
+              <li><a href="https://wa.me/263771000000" target="_blank" class="footer-link">Direct Line to Showroom</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h4>Flagship Gallery</h4>
+            <div class="footer-contact-item">
+              <i data-lucide="map-pin" style="width: 16px; height: 16px;"></i>
+              <span>Borrowdale Road &bull; Harare, Zimbabwe</span>
+            </div>
+            <div class="footer-contact-item">
+              <i data-lucide="clock" style="width: 16px; height: 16px;"></i>
+              <span>Monday – Saturday &bull; 08:30 – 17:30</span>
+            </div>
+            <div class="footer-contact-item">
+              <i data-lucide="phone" style="width: 16px; height: 16px;"></i>
+              <span>+263 (0) 77 100 0000</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <div>&copy; 2026 Royal Decaux. All Rights Reserved.</div>
+          <div>White-Glove Nationwide Logistics &bull; Harare &bull; Bulawayo &bull; Victoria Falls</div>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+
+  <!-- Cart Drawer -->
+  <div class="cart-drawer-overlay" id="cartDrawerOverlay"></div>
+  <div class="cart-drawer" id="cartDrawer">
+    <div class="cart-drawer-header">
+      <h3>Basket (3)</h3>
+      <button class="modal-close-icon" id="closeCartBtn" style="position: static;">
+        <i data-lucide="x" style="width: 16px; height: 16px;"></i>
+      </button>
+    </div>
+    <div class="cart-drawer-body">
+      <div class="order-item-row">
+        <img src="/assets/images/exec_chair.jpg" alt="Chair" class="order-item-img">
+        <div class="order-item-info">
+          <div class="order-item-name">The Sovereign Executive Throne</div>
+          <div class="order-item-meta">Italian Leather &bull; Qty: 1</div>
+          <div class="order-item-price">$680.00 USD</div>
+        </div>
+      </div>
+      <div class="order-item-row">
+        <img src="/assets/images/chesterfield.jpg" alt="Sofa" class="order-item-img">
+        <div class="order-item-info">
+          <div class="order-item-name">Palais Bordeaux Chesterfield</div>
+          <div class="order-item-meta">Wine Velvet &bull; Qty: 1</div>
+          <div class="order-item-price">$1,250.00 USD</div>
+        </div>
+      </div>
+      <div class="order-item-row">
+        <img src="/assets/images/armchair.jpg" alt="Armchair" class="order-item-img">
+        <div class="order-item-info">
+          <div class="order-item-name">Kensington Leather Armchair</div>
+          <div class="order-item-meta">Saddle Tan &bull; Qty: 1</div>
+          <div class="order-item-price">$540.00 USD</div>
+        </div>
+      </div>
+    </div>
+    <div class="cart-drawer-footer">
+      <div class="summary-calc-row">
+        <span>Curated Subtotal</span>
+        <span>$2,470.00 USD</span>
+      </div>
+      <div class="summary-calc-row">
+        <span>White-Glove Installation</span>
+        <span style="color: var(--champagne-gold); font-weight: 600;">Complimentary</span>
+      </div>
+      <div class="summary-calc-row total">
+        <span>Total Investment</span>
+        <span>$2,470.00 USD</span>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 0.75rem; margin-top: 1.5rem;">
+        <a href="checkout.html" class="btn-royal" style="width: 100%; text-align: center;">Proceed To Checkout</a>
+        <a href="contact.html" class="btn-crimson" style="width: 100%; text-align: center;">Contact Showroom</a>
+      </div>
+    </div>
+  </div>
+
+  <script src="/assets/js/mobile-nav.js?v=25.0"></script>
+  <script src="/assets/js/main.js"></script>
+  <script>
+    lucide.createIcons();
+  </script>
+</body>
+</html>

@@ -3,8 +3,9 @@
   "version": "1.0.0",
   "private": true,
   "type": "commonjs",
+  "main": "server.cjs",
   "scripts": {
     "build": "",
-    "dev": "node server.cjs"
+    "start": "node server.cjs"
   }
 }
